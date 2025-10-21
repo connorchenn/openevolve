@@ -306,7 +306,6 @@ class ProcessParallelController:
                 "api_base": config.llm.api_base,
                 "api_key": config.llm.api_key,
                 "temperature": config.llm.temperature,
-                "top_p": config.llm.top_p,
                 "max_tokens": config.llm.max_tokens,
                 "timeout": config.llm.timeout,
                 "retries": config.llm.retries,

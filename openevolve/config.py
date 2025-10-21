@@ -56,7 +56,6 @@ class LLMConfig(LLMModelConfig):
     # Generation parameters
     system_message: Optional[str] = "system_message"
     temperature: float = 0.7
-    top_p: float = 0.95
     max_tokens: int = 4096
 
     # Request parameters
@@ -124,7 +123,6 @@ class LLMConfig(LLMModelConfig):
             "api_base": self.api_base,
             "api_key": self.api_key,
             "temperature": self.temperature,
-            "top_p": self.top_p,
             "max_tokens": self.max_tokens,
             "timeout": self.timeout,
             "retries": self.retries,
@@ -177,7 +175,6 @@ class LLMConfig(LLMModelConfig):
             "api_base": self.api_base,
             "api_key": self.api_key,
             "temperature": self.temperature,
-            "top_p": self.top_p,
             "max_tokens": self.max_tokens,
             "timeout": self.timeout,
             "retries": self.retries,
@@ -420,7 +417,6 @@ class Config:
                 "evaluator_models": self.llm.evaluator_models,
                 "api_base": self.llm.api_base,
                 "temperature": self.llm.temperature,
-                "top_p": self.llm.top_p,
                 "max_tokens": self.llm.max_tokens,
                 "timeout": self.llm.timeout,
                 "retries": self.llm.retries,

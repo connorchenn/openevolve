@@ -25,7 +25,6 @@ class OpenAILLM(LLMInterface):
         self.model = model_cfg.name
         self.system_message = model_cfg.system_message
         self.temperature = model_cfg.temperature
-        self.top_p = model_cfg.top_p
         self.max_tokens = model_cfg.max_tokens
         self.timeout = model_cfg.timeout
         self.retries = model_cfg.retries
@@ -124,7 +123,6 @@ class OpenAILLM(LLMInterface):
                 "model": self.model,
                 "messages": formatted_messages,
                 "temperature": kwargs.get("temperature", self.temperature),
-                "top_p": kwargs.get("top_p", self.top_p),
                 "max_tokens": kwargs.get("max_tokens", self.max_tokens),
             }
 
